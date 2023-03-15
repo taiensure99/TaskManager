@@ -47,7 +47,7 @@ namespace TaskManager.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginForm dataPost)
         {
-            var data = _context.Users.FirstOrDefault(f => f.UserName == dataPost.UserName && f.Passwork == dataPost.Password);
+            var data = _context.Users.FirstOrDefault(f => f.UserName == dataPost.UserName && f.Password == dataPost.Password);
             if(data == null)
             {
                 return Ok(new

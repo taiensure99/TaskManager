@@ -14,7 +14,7 @@ namespace TaskManager.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class TaskController : ControllerBase
     {
         private readonly MyDbContext _context;
